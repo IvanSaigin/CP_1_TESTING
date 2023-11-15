@@ -1,8 +1,9 @@
 # Работа с CSV файлом: найти среднее арифметическое для оценок и проверить через pytest с реальной оценкой (должны быть найдены ошибки).
 
 import pytest
-import csv 
+import csv
 
+# Получение информации из файла  
 def get_file():
     with open('grades.csv') as file:
       list_grades = list(csv.reader(file, delimiter=","))
@@ -10,6 +11,8 @@ def get_file():
 
 GET = get_file()
 
+
+# Вычисление среднего значения 
 def avg_grades():
 
     mass_total = [] 
@@ -21,7 +24,7 @@ def avg_grades():
         mass_total.append(total)
     return mass_total
 
-
+# Получение данных из файла и запись в список 
 def end_is():
 
     mass_total_answer = []
@@ -30,6 +33,7 @@ def end_is():
         mass_total_answer.append(row[7])
     return mass_total_answer
 
+# Получение списка со средним значением из файла и полученного 
 
 def concat_total():
     mass_total_answer = end_is()
